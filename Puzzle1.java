@@ -70,6 +70,7 @@ public class Puzzle {
 		ArrayList<String> result = new ArrayList<String>();
 		int m = puzzle.length;
 		int n = puzzle[0].length;
+		int counter=0;
 		
 		for(String word: DICTIONARY){
 			boolean flag = false;
@@ -81,6 +82,7 @@ public class Puzzle {
 							newBoard[x][y]=puzzle[x][y];
 			if(dfs(newBoard,word,i,j,0)){
 				flag=true;
+				counter++;
 			       }
 				}
 			}
@@ -95,6 +97,7 @@ public class Puzzle {
 		for(String s: result){
 			System.out.println(s);
 		}
+		System.out.println(counter);
 		
 				
 	}
